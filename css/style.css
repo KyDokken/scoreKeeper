@@ -1,0 +1,11 @@
+.winner {
+    color: green;
+}
+
+body {
+    position: relative;
+    background-color: black;
+    color: white;
+    text-align: center;
+    top: 12rem;
+}
