@@ -12,7 +12,6 @@ var p2Score = 0;
 var gameOver = false;
 var winningScore = 5;
 
-console.log(p1Button);
 // Add to player 1 score
 p1Button.addEventListener("click", function () {
     if (!gameOver) {
@@ -39,6 +38,10 @@ p2Button.addEventListener("click", function () {
 
 // Reset button
 resetButton.addEventListener("click", function () {
+    reset();
+});
+
+function reset() {
     p1score = 0;
     p2Score = 0;
     s1Display.textContent = 0;
@@ -46,11 +49,12 @@ resetButton.addEventListener("click", function () {
     s1Display.classList.remove("winner");
     s2Display.classList.remove("winner");
     gameOver = false;
-});
+}
 
 // Input #
 numberInput.addEventListener("change", function () {
     winningScoreDisplay.textContent = numberInput.value;
-    winningScore = numberInput.value;
+    winningScore = Number(numInput.value);
+    reset();
 
 });
